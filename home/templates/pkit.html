@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Press Kit{% endblock title %}
+
+{% block body %} <br><br>
+<div class="btns">
+    <center>
+        <input type="button" value="Download Press Kit"><br>
+        <input type="button" value="Download Work Profile">
+    </center>
+
+</div>
+<div class="pkit">
+    <div class="details">
+        <h3>INFO</h3><br>
+        <!-- for loop -->
+        <p><strong>Genre: </strong>  {{pkit_obj.genre}}</p>
+        <p><strong>Years Active: </strong>  {{pkit_obj.years_active}}.</p>
+        <p><strong>Origin: </strong>  {{pkit_obj.origin}}.</p>
+        <br>
+        <h3>BIO</h3><br>
+        <p>
+            {{pkit_obj.bio}}
+        </p>
+    </div>
+    <div class="mimg">
+        <img src="{{pkit_obj.image.url}}" alt="">
+    </div>
+</div>
+{% endblock body %}

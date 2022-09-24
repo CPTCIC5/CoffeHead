@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Tour{% endblock title %}
+
+{% block body %}
+<div class="tour"><br><br>
+    <center><h2>Events</h2></center>
+    
+    <div class="card1">
+        <!-- for loop -->
+        {% for tour in tour_obj %}
+        <div class="card-body">
+            <div>
+            <h3>{{tour.text}}</h3>
+            <p style="color: grey; opacity:0.7;">{{tour.datetime}}</p>  
+           </div>
+            <p style="text-align: right;">{{tour.city}}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock body %}

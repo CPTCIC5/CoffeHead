@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>{% block title %}{%endblock%}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+   <br> <center><h2>Smokey</h2>
+    <div class="socials">
+        <center>
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-spotify"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a> 
+        </center>
+    </div>
+</center><br>
+    <div class="nav">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+                <li><a href="/music">Music</a></li>
+                <li><a href="/videos">Videos</a></li>
+                <li><a href="/tour">Tour</a></li>
+                <li><a href="/pkit">Press Kit</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main">
+        {% block body %}{% endblock body %}
+    </div><br>
+    <hr><br>
+    <center>
+        <p>© 2021 SMOKEYSOUND  |  ALL RIGHTS RESERVED </p>
+    </center><br>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Gallery{% endblock title %}
+
+{% block body %}
+<div class="gallery">
+   
+<div class="card">
+     {% for gallery in gallery_obj %}
+    <div class="card-body1">
+        <img src="{{image.url}}" alt="">
+        <div class="text-post">
+            <h2>{{gallery.text}}</h2>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+{% endblock body %}
