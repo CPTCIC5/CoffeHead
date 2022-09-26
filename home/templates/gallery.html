@@ -5,10 +5,10 @@
 {% block body %}
 <div class="gallery">
    
-<div class="card">
+<div class="card4">
      {% for gallery in gallery_obj %}
     <div class="card-body1">
-        <img src="{{image.url}}" alt="">
+        <img src="{{gallery.image.url}}" alt="">
         <div class="text-post">
             <h2>{{gallery.text}}</h2>
         </div>

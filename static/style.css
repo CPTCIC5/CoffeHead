@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -8,6 +9,7 @@ html{
     font-family: 'Quicksand', sans-serif;
     overflow-x: hidden;
 }
+
 .socials{
     font-size: 24px;
 }
@@ -45,34 +47,38 @@ nav ul li a:hover{
     height: 650px;
     transition: .3s linear;
 }
-.sta-txt{
-    position: relative;
-    top: -400px;
-    color: black;
-    padding: 10px;
-    margin-left: 400px;
-    margin-right: 400px;
-    background-color: rgb(241, 220, 220);
-    font-size: 20px;
-    box-shadow: 1px 2px 20px black;
-    opacity: 0;
-}
-.img-hm:hover{
-    opacity: .4;
-}
-.img-hm:hover ~ .sta-txt{
-    opacity: 1;
-}
+
+
+
 .card{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
+}
+.card3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 .card1{
     display: grid;
     grid-template-columns: 1fr ;
 
 }
+.card2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr  ;
+
+}
+.card4{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.card4 .card-body1 img:hover{
+    opacity:0.4;
+    }
+    .card4 .card-body1 img:hover ~ .text-post{
+    opacity:1;
+    }
 .card .card-body{
     box-shadow: 1px 5px 20px rgb(204, 197, 197);
     margin: 30px;
@@ -81,6 +87,35 @@ nav ul li a:hover{
 }
 .card .card-body:hover{
     box-shadow: 2px 2px 40px 1px black;
+}
+.card3 .card-body3{
+   box-shadow: 1px 5px 20px rgb(204, 197, 197);
+   margin: 30px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   border-radius: 10px;
+   padding: 10px 0px;
+   transition: .3s linear;
+}
+.card3 .card-body3 img{
+    width: 40%;
+}
+.card3 .card-body3 audio{
+    width: 100%;
+}
+.card3 .card-body3 .mb{
+    width: 50%;
+    padding: 10px;
+}
+.mb h3{
+    margin: 5px;
+    font-weight: 550;
+    margin-bottom: 10px;
+}
+.mb p{
+    margin: 5px;
+    margin-bottom: 20px;
 }
 .card1 .card-body{
     box-shadow: 1px 5px 20px rgb(204, 197, 197);
@@ -105,19 +140,21 @@ nav ul li a:hover{
     width: 97%;
     object-fit: cover;
 }
-.card .card-body1 img{
+.card4 .card-body1 img{
     width: 100%;
-    object-fit: cover;
+    margin-top: 20px;
+    height: 500px;
+    object-fit: cover;    
     transition: .3s linear;
 }
 .about{
     margin: 40px;
 }
 .text-post{
-    position:relative;
-    top: -250px;
-    left: 40%;
-    opacity: 0;
+   position: relative;
+   top: -50%;
+   left: 45%;
+   opacity: 0;
 }
 .card .card-body1 img:hover{
     opacity: 0.3;
@@ -126,18 +163,24 @@ nav ul li a:hover{
 .card .card-body1 img:hover ~ .text-post{
     opacity: 1;
 }
-
-.pkit{
+.card .card-body video{
     width: 100%;
+}
+.vidpost{
+    margin-top: 30px;
+}
+.kit{
     display: flex;
     flex-direction: row;
-    margin: 30px;
+    justify-content: space-between;
+    margin: 20px;
 }
-.details{
-    width: 48%;
+.kit .d{
+    margin: 20px;
+    margin-left: 20%;
 }
 .mimg{
-    margin-left: 10px;
+    margin-right: 5%;
     width: 48%;
 }
 .mimg img{
@@ -186,4 +229,15 @@ textarea{
 .btnsb:hover{
     background-color: black;
     color: white;
+}
+
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.active{
+    color: black;
 }

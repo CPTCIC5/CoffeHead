@@ -23,6 +23,7 @@ class HomePosts(models.Model):
         return self.name
 
     class Meta:
+        verbose_name_plural='HomePosts'
         ordering = ['-time']
 
 class Gallery(models.Model):
@@ -44,10 +45,33 @@ class Gallery(models.Model):
         return self.text
     
     class Meta:
+        verbose_name_plural='Gallery'
         ordering = ['-uploaded_on']
 
-#class Video(models.Model):
+class Music(models.Model):
+    title=models.CharField(max_length=50)
+    small_desc=models.CharField(max_length=50)
+    image=models.ImageField(upload_to='Music-Images',validators=[validate_image_file_extension])
+    music=models.FileField(upload_to='Music-Audio')
+    uploaded_on=models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        ordering=['-uploaded_on']
+
+class Video(models.Model):
+    title=models.CharField(max_length=50)
+    desc=models.TextField()
+    video=models.FileField()
+    uploaded_on=models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        ordering=['-uploaded_on']
 
 class Tour(models.Model):
     text=models.CharField(max_length=50,unique=True)
@@ -58,6 +82,7 @@ class Tour(models.Model):
         return self.text
 
     class Meta:
+        verbose_name_plural='Tour'
         ordering = ['-datetime']
 
 class Presskit(models.Model):
@@ -65,11 +90,15 @@ class Presskit(models.Model):
     years_active=models.CharField(max_length=50)
     origin=models.CharField(max_length=50)
     bio=models.TextField()
-    #presski=models.FileField
+    presskit=models.FileField(blank=True,null=True)
+    work_profile=models.FileField(blank=True,null=True)
     image=models.ImageField(upload_to='Presskit',validators=[validate_image_file_extension])
 
     def __str__(self):
         return f"About-PressKit"
+    
+    class Meta:
+        verbose_name_plural='Presskit'
 
 class Contact(models.Model):
     name=models.CharField(max_length=50)

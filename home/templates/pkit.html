@@ -5,13 +5,14 @@
 {% block body %} <br><br>
 <div class="btns">
     <center>
-        <input type="button" value="Download Press Kit"><br>
-        <input type="button" value="Download Work Profile">
+        <a href="" download="{{pkit_obj.presskit}}"><input type="button" value="Download PressKit"><br></a>
+        <a href="" download="{{pkit_obj.work_profile}}"><input type="button" value="Download WorkProfile"></a>
     </center>
 
 </div>
-<div class="pkit">
-    <div class="details">
+
+<div class="kit">
+    <div class="d">
         <h3>INFO</h3><br>
         <!-- for loop -->
         <p><strong>Genre: </strong>  {{pkit_obj.genre}}</p>
@@ -22,9 +23,12 @@
         <p>
             {{pkit_obj.bio}}
         </p>
+ 
     </div>
-    <div class="mimg">
-        <img src="{{pkit_obj.image.url}}" alt="">
-    </div>
+        <div class="mimg">
+            <img src="{{pkit_obj.image.url}}" alt="">
+        </div>
+    
 </div>
+        
 {% endblock body %}

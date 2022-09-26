@@ -3,5 +3,18 @@
 {% block title %}Music{% endblock title %}
 
 {% block body %}
-
+<div class="music">
+    <div class="card3">
+        {% for music in music_obj %}
+        <div class="card-body3">
+            <img src="{{music.image.url}}" alt="">
+            <div class="mb">
+                <h3>{{music.title}}</h3>
+                <p>{{music.small_desc}}</p>
+                <audio src="{{music.music.url}}" controls></audio>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock body %}
