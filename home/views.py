@@ -15,6 +15,7 @@ def gallery(request):
 
 def music(request):
     music_obj=Music.objects.all()
+    print(music_obj)
     return render(request,'music.html',{'music_obj':music_obj})
 
 def videos(request):
@@ -29,13 +30,6 @@ def tour(request):
 def presskit(request):
     pkit_obj=get_object_or_404(Presskit,id=1)
     return render(request,'pkit.html',{'pkit_obj':pkit_obj})
-
-def videos(request):
-    return render(request,'videos.html')
-
-
-def music(request):
-    return render(request,'music.html')
 
 def contact(request):
     if request.method == "POST":

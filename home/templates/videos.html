@@ -4,17 +4,14 @@
 
 {% block body %}
 <div class="videos" style="margin: 20px; width:100%;">
-
     <center>
         <h2>Latest Video</h2><br>
-    <video src="{{latest_vid.video}}" style="width: 80%;" controls></video></center>
-
+    <video src="{{latest_vid.video.url}}" style="width: 80%;" controls></video></center>
     <div class="vidpost">
-       
         <div class="card">
             {% for video in video_obj %}
             <div class="card-body" style="padding:10px; cursor:pointer">
-                <video src="{{video.video}}" controls></video>
+                <video src="{{video.video.url}}" controls></video>
                 <h2 style="margin: 10px; font-weight: 400;" >{{video.title}}</h2>
                 <p style="margin: 10px;">{{video.desc}}</p>
             </div>

@@ -64,7 +64,7 @@ class Music(models.Model):
 class Video(models.Model):
     title=models.CharField(max_length=50)
     desc=models.TextField()
-    video=models.FileField()
+    video=models.FileField(upload_to='Video-Files')
     uploaded_on=models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
