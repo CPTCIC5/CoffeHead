@@ -1,13 +1,14 @@
 from django.shortcuts import render,get_object_or_404
 from django.http import HttpResponseRedirect
 from django.urls import reverse 
-from .models import Contact,HomePosts,Gallery, Music, Presskit,Tour, Video
+from .models import Contact,HomePosts,Gallery, Music, Presskit,Tour, Video,HomeImageAbout
 from django.contrib import messages
 
 # Create your views here.
 def home(request):
+    home_data=HomeImageAbout.objects.latest('id')
     home_obj= HomePosts.objects.all()[0:6]
-    return render(request,'index.html',{'home_obj':home_obj})
+    return render(request,'index.html',{'home_data':home_data,'home_obj':home_obj})
 
 def gallery(request):
     gallery_obj=Gallery.objects.all()

@@ -3,6 +3,17 @@ from django.core.validators import validate_image_file_extension
 from PIL import Image
 
 
+class HomeImageAbout(models.Model):
+    poster_image=models.ImageField(upload_to='Home-Poster-Images',validators=[validate_image_file_extension])
+    about=models.TextField()
+    image=models.ImageField(upload_to='Home-About-Image',validators=[validate_image_file_extension])
+
+    def __str__(self):
+        return f"HomeImageAbout"
+
+    class Meta:
+        verbose_name_plural='HomeImageAbout'
+
 class HomePosts(models.Model):
     name=models.CharField(max_length=50)
     image=models.ImageField(upload_to='Home-Images',validators=[validate_image_file_extension])
@@ -52,7 +63,7 @@ class Music(models.Model):
     title=models.CharField(max_length=50)
     small_desc=models.CharField(max_length=50)
     image=models.ImageField(upload_to='Music-Images',validators=[validate_image_file_extension])
-    music=models.FileField(upload_to='Music-Audio')
+    music=models.URLField()
     uploaded_on=models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

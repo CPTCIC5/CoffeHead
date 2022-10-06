@@ -6,8 +6,9 @@
 
 }
 html{
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Gemunu Libre', sans-serif;
     overflow-x: hidden;
+    font-size: 20px;
 }
 
 .socials{
@@ -49,8 +50,7 @@ nav ul li a:hover{
     place-items: center;
 }
 .img-hm{
-
-    width: 70%;
+    width: 50%;
     object-fit: cover;
     height: 580px;
     transition: .3s linear;
@@ -154,9 +154,30 @@ nav ul li a:hover{
     transition: .3s linear;
     margin-top: 20px;
 }
-
 .about{
-    margin: 40px;
+    width: 100%;
+    padding: 40px;
+    background-color: rgba(211, 207, 207, 0.736);
+}
+.about h2{
+    border: 1px solid black;
+    width: 10%;
+    text-align: center;
+    padding: 10px;
+}
+.abouttt{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.aboutttt {
+    width: 50%;
+    word-wrap: break-word;
+    margin: 10px;
+}
+.abouttt img{
+    width: 40%;
 }
 .text-post{
    position: relative;
@@ -255,3 +276,21 @@ textarea{
 .active{
     color: black;
 }
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px;
+  }
+  .flinks{
+    color: white;
+  }
+  .flinks p{
+    color: rgba(128, 128, 128, 0.797);
+  }
+  .flinks a{
+    text-decoration: none;
+    color: rgba(128, 128, 128, 0.797);
+  }

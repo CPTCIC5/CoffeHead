@@ -4,11 +4,14 @@
 
 {% block body %}
 <div class="sta-img"><br><br>
+    {% if home_data.poster_image %}
+    <img src="{{home_data.poster_image.url}}" alt="" class="img-hm">
+    {% else %}
     <img src="{% static 'images/DSC09196.jpg' %}" alt="" class="img-hm">
-   
+   {% endif %}
 </div>
 
-<div class="card">
+<div class="card hcard">
     {% for home in home_obj %}
     <div class="card-body">
         {% if home.link %}
@@ -23,7 +26,11 @@
 <br><br>
 <div class="about">
     <center><h2>About</h2></center><br>
-    <p>Smokey is a DJ, Music Producer, Electronic Live Act & Teacher based out of Mumbai. She has performed at Festivals like Bacardi NH7 Weekender (Pune), Life In Color Festival (Delhi), Bass Camp Festival (Krunk, Mumbai), Sunburn Arena / Wiz Khalifa Concert (Mumbai), India Bike Week (Goa), Indie Art Week (Delhi), Fields Of Love (Hyderabad), God's Own Music Festival (Kerala), to name a few. Her spirit of dedication towards the music has led her to get a great appreciation for her sets from her fellow artists such as Diplo, Wiz Khalifa, What So Not, DJ 4B, Tynan, Nucleya, Divine, Ritviz, Midival Punditz, Monica Dogra, Karan Kanchan, MC Fava (DE), Moresounds (FR), Om Unit (UK), Kutmah (UK), Amit (UK), Spikey Tee (UK), Sinistarr (US), Indika (UK), PLO (Outlook) and many more she’s shared the stage with across various clubs and festivals in her journey so far. She is been featured on BBC Asian Network, Rolling Stone India, Vh1 India, Vh1 Supersonic, Indian Music Diaries, Boxout FM, Wild City India, Delhi Times & M-Tv Indies. She’s also been supported by KRUNK in their exclusive StrictlyDrumNBass Nights’ that connects to the soul of the Bass Sounds, not to forget she was also supported by 'BBC Asian Network for Nucleya's Show'.
-    <br><br> Her dynamic and prolific amount of work also includes being a Faculty at Audioqube Academy - A state of the art Music Production Academy. Every form of expression Smokey embraces is steeped in an innate dramatic flair with a musical prowess that uncovers a true artist within. An immensely experienced artist as she is, Smokey manages to use fascinating music to sustain drama and intensity during the performances. Smokey's dedication and hard work have helped her already reach an impressive social media presence that only continues to grow.</p>
-</div>
+    <div class="abouttt">
+        <div class="aboutttt">
+            <p>{{home_data.about}}</p>
+        </div>
+    <img src="{{home_data.image.url}}" alt="">
+    </div>
+</div><br><br>
 {% endblock body %}
