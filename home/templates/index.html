@@ -3,13 +3,16 @@
 {% block title %}Home{% endblock title %}
 
 {% block body %}
-<div class="sta-img"><br><br>
-    {% if home_data.poster_image %}
-    <img src="{{home_data.poster_image.url}}" alt="" class="img-hm">
-    {% else %}
-    <img src="{% static 'images/DSC09196.jpg' %}" alt="" class="img-hm">
-   {% endif %}
+<div>
+    <div class="sta-img"><br><br>
+        {% if home_data.poster_image %}
+        <img src="{{home_data.poster_image.url}}" alt="" class="img-hm">
+        {% else %}
+        <img src="{% static 'images/DSC09196.jpg' %}" alt="" class="img-hm">
+       {% endif %}
+    </div>
 </div>
+
 
 <div class="card hcard">
     {% for home in home_obj %}
@@ -33,4 +36,5 @@
     <img src="{{home_data.image.url}}" alt="">
     </div>
 </div><br><br>
+
 {% endblock body %}

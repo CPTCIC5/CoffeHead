@@ -294,3 +294,13 @@ footer{
     text-decoration: none;
     color: rgba(128, 128, 128, 0.797);
   }
+  .music {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .music .musiclist{
+    margin:20px;
+  }
+  .musiclist h3{
+    margin: 10px;
+  }

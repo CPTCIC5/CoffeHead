@@ -56,13 +56,17 @@ class Gallery(models.Model):
         return self.text
     
     class Meta:
-        verbose_name_plural='Gallery'
+        verbose_name_plural='Gallery'   
         ordering = ['-uploaded_on']
 
+title_choices = (
+    ("Spotify","Spotify"),
+    ("SoundCloud","SoundCloud"),
+    ("Mixcloud","Mixcloud")
+)
+
 class Music(models.Model):
-    title=models.CharField(max_length=50)
-    small_desc=models.CharField(max_length=50)
-    image=models.ImageField(upload_to='Music-Images',validators=[validate_image_file_extension])
+    title=models.CharField(max_length=50,choices=title_choices)
     music=models.URLField()
     uploaded_on=models.DateTimeField(auto_now_add=True)
 
@@ -70,7 +74,7 @@ class Music(models.Model):
         return self.title
 
     class Meta:
-        ordering=['-uploaded_on']
+        ordering=['uploaded_on']
 
 class Video(models.Model):
     title=models.CharField(max_length=50)
