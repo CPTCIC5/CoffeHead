@@ -4,7 +4,7 @@
 
 {% block body %}
 <div>
-    <div class="sta-img"><br><br>
+    <div class="sta-img" id="poster_bg">
         {% if home_data.poster_image %}
         <img src="{{home_data.poster_image.url}}" alt="" class="img-hm">
         {% else %}
@@ -28,7 +28,9 @@
 </div>
 <br><br>
 <div class="about">
-    <center><h2>About</h2></center><br>
+    <div id="about_text">
+        <h2>About</h2>
+    </div>
     <div class="abouttt">
         <div class="aboutttt">
             <p>{{home_data.about}}</p>
