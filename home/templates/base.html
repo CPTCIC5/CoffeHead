@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-<body background="white">
+<body>
    <br> <center><img id="nav_logo" src="{% static 'images/Black_Logo_PNG.png' %}" alt="">
     <div class="socials">
         <center>
@@ -33,8 +33,8 @@
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/music">Music</a></li>
                 <li><a href="/gallery">Gallery</a></li>
+                <li><a href="/music">Music</a></li>
                 <li><a href="/videos">Videos</a></li>
                 <li><a href="/tour">Tour</a></li>
                 <li><a href="/pkit">Press Kit</a></li>
@@ -46,7 +46,7 @@
         {% block body %}{% endblock body %}
     </div><br>
    <br>
-  
+  <hr>
     <footer style="background-color: black">
         <div class="flinks">
             <h2>STICH</h2><br>
@@ -55,16 +55,19 @@
                     We use the modal expression be about to as an adjective in the modal expression be about to <br> refer to something that will happen very soon in the future: … "What’s that book about?" "It’s about the Civil<br> War." I don’t know what all the fuss is about. There’s something about her attitude that worries me He looked<br> as if he was about to burst into tears. I’m not about to apologize to him.
                 </p>
             </div>
-        </div>
+        </div><br>
         <div class="flinks">
             <h2>QUICK LINKS</h2><br>
-            <a href="">Home</a><br>
-            <a href="/gallery">Gallery</a><br>
-            <a href="/music">Music</a><br>
-            <a href="/videos">Videos</a><br>
-            <a href="/tour">Tour</a><br>
-            <a href="/pkit">Presskit</a><br>
-            <a href="/contact">Contact</a><br>
+            <ul class="foolink">
+                <a href="">Home</a><br>
+                <a href="/gallery">Gallery</a><br>
+                <a href="/music">Music</a><br>
+                <a href="/videos">Videos</a><br>
+                <a href="/tour">Tour</a><br>
+                <a href="/pkit">Presskit</a><br>
+                <a href="/contact">Contact</a><br>
+            </ul>
+           
         </div>
         
     </footer><hr>

@@ -3,15 +3,15 @@
 {% block title %}Videos{% endblock title %}
 
 {% block body %}
-<div class="videos" style="margin: 20px; width:100%;">
+<div class="videos" style="margin-top: 20px; width:100%;">
     <center>
         <h2>Latest Video</h2><br>
-    <video src="{{latest_vid.video.url}}" style="width: 80%;" controls></video></center>
+    <video src="{{latest_vid.video.url}}" style="width: 100%;height: 600px;" controls></video></center>
     <div class="vidpost">
         <div class="card">
             {% for video in video_obj %}
             <div class="card-body" style="padding:10px; cursor:pointer">
-                <video src="{{video.video.url}}" controls></video>
+                <video src="{{video.video.url}}" height="400" controls></video>
                 <h2 style="margin: 10px; font-weight: 400;" >{{video.title}}</h2>
                 <p style="margin: 10px;">{{video.desc}}</p>
             </div>

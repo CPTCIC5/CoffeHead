@@ -18,9 +18,13 @@
     {% for home in home_obj %}
     <div class="card-body">
         {% if home.link %}
-        <a href="{{home.link}}"><img src="{{home.image.url}}" alt=""></a>
+        <div class="img">
+            <a href="{{home.link}}"><img src="{{home.image.url}}" alt=""></a>
+        </div>
         {% else %}
-        <a href=""><img src="{{home.image.url}}" alt=""></a>
+        <div class="img">
+            <a href=""><img src="{{home.image.url}}" alt=""></a>
+        </div>
         {% endif %}
     </div>
     {% endfor %}
@@ -29,13 +33,14 @@
 <br><br>
 <div class="about">
     <div id="about_text">
-        <h2>About</h2>
+        <h2>About</h2><br>
     </div>
     <div class="abouttt">
+        <img src="{{home_data.image.url}}" alt="">
         <div class="aboutttt">
             <p>{{home_data.about}}</p>
         </div>
-    <img src="{{home_data.image.url}}" alt="">
+   
     </div>
 </div><br><br>
 

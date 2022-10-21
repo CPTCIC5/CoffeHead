@@ -8,12 +8,12 @@
     <!-- msg flash -->
     <div class="msg">
         {% for msg in messages %}
-        <p style="background-color:lime;padding: 10px;">{{msg}}</p>
+        <p style="background-color:lime;padding-top: 10px;">{{msg}}</p>
         {% endfor %}
     </div>
     {% endif %}
-    <center><h2 style="background-color: rgb(200, 185, 185);padding:10px;">BOOKINGS & ENQUIRIES</h2>
-    <br><form method="POST">
+    <center><h2 style="padding:20px;">BOOKINGS & ENQUIRIES</h2>
+    <br><form method="POST" style="margin: 10px">
         {% csrf_token %}
         <!-- contact form backend -->
         <div>
